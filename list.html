@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Moreport" content="width=device-width, initial-scale=1.0">
+    <title>RehabOnline - Treatments List</title>
+
+    <!-- cdn bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <!-- cdn Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- cdn font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="layout">
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <section class="container-fluid">
+                <!-- logo -->
+                <a class="navbar-brand" href="index.html">
+                    <span>RehabOnline</span>
+                </a>
+
+                <!-- Toggle navbar-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Patients</a>
+                        </li>
+                        <!-- Therapist -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="images/therapist.png" class="rounded-circle" alt="therapist"
+                                    loading="therapist" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main id="list-wrapper">
+
+        <section class="container container-fluid">
+
+            <!-- breadcrumb -->
+            <section class="breadcrumb-container" style="--bs-breadcrumb-divider: '\203A';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Eli Alice</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Treatments Plans</li>
+                </ol>
+            </section>
+
+            <!-- title -->
+            <section class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Treatments Plans</h1>
+            </section>
+            <div class="container">
+                <!-- Patient plans -->
+                <section class="row">
+                    <!-- Patient data-->
+                    <section class="col-lg-4 col-md-10 border-right">
+                        <div class="card shadow mb-4 border-right">
+                            <div class="d-flex flex-column p-5 py-5">
+                                <h4 class="mb-0"> Patient Details</h4>
+                                <img id="userImg" class="rounded-circle py-5" width="150px" src="images/user2.png">
+                                <h5 id="name">Eli Alice</h5>
+                                <p id="email"><b>Email: </b> @gmail.com</p>
+                                <p id="phone"><b>Phone: </b>054-eliali55431470</p>
+                                <p id="address"><b>Address: </b> Ramat Efal, The lotus 10</p>
+                                <p id="gender"><b>Gender: </b> male</p>
+                                <p id="startDate">Starting the rehabilitation process on 25/01/22</p>
+                                <p><b>About</b></p>
+                                <p id="about">
+                                    During the football game he was
+                                    injured and as a result was hospitalized
+                                    for about three weeks with injuries to
+                                    his legs.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Treatments Plans section -->
+                    <section class="col-lg-8 col-md-10 border-right">
+                        <div class="container card shadow mb-4">
+
+                            <section class="container top-bar">
+
+                                <article class="form-outline">
+                                    <input type="search" id="search" class="form-control" placeholder="&#xF002; Search"
+                                        aria-label="Search">
+                                </article>
+
+                                <!-- CRUD -->
+                                <article class="crud">
+                                    <button id="delete-btn" type="button" class="btn btn-outline-primary">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        Delete
+                                    </button>
+                                    <button id="edit-btn" type="button" class="btn btn-outline-primary">
+                                        <i class="fa-solid fa-pen"></i>
+                                        Edit
+                                    </button>
+                                    <button id="add-btn" type="button" class="btn btn-outline-primary">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                        Add
+                                    </button>
+                                </article>
+
+                            </section>
+                            <hr>
+                            <section class="accordion accordion-flush" id="accordionExample">
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Leg Exercises to Improve Flexibility
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>Leg Exercises to Improve Flexibility</h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>7 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="#" class="btn btn-outline-primary">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Leg Exercises For Muscle And Strength
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>Leg Exercises For Muscle And Strength</h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>3 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="object.html" class="btn btn-outline-primary">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            10-Step Leg Workout
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>10-Step Leg Workout</h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>7 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="#" class="btn btn-outline-primary">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Foot and Ankle Exercises </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>Foot and Ankle Exercises</h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>7 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="#" class="btn btn-outline-primary">
+                                                    More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            Stabilizer Muscles Exercises </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>Stabilizer Muscles Exercises </h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>7 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="#" class="btn btn-outline-primary">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                                <article class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                            aria-expanded="false" aria-controls="collapseSix">
+                                            Core Workout </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                        <div class="d-flex flex-column accordion-body">
+                                            <h3>Core Workout</h3>
+                                            <div>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-clock"></i>15 minutes
+                                                </span>
+                                                <span class="item-icon">
+                                                    <i class="fas fa-running"></i>7 exercises
+                                                </span>
+                                            </div>
+                                            <p>
+                                                The main focus of this treatment is on strengthening the quads and
+                                                hamstrings.
+                                                The secondary focus is on core exercises.
+                                            </p>
+                                            <div class="align-self-end">
+                                                <a href="#" class="btn btn-outline-primary">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <br>
+
+                            </section>
+                        </div>
+                    </section>
+
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 RehabOnline</p>
+        <a href="#"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="images/logo.png" class="rounded-circle" alt="logo" loading="logo" />
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+    </footer>
+
+    <script src="./js/list.js"></script>
+</body>
+
+</html>
