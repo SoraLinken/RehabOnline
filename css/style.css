@@ -332,6 +332,10 @@ select {
 
 }
 
+.listImg {
+    width: 150px;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         margin-left: -100px;
